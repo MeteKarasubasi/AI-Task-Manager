@@ -24,13 +24,26 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
     },
     "plugins": [
       "expo-router"
     ],
     "scheme": "task-manager",
     "sdkVersion": "52.0.0",
-    "newArchEnabled": true
+    "newArchEnabled": true,
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "task-manager"
+      }
+    }
   }
 }
