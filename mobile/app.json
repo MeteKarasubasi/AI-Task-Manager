@@ -15,13 +15,18 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.taskmanager"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.yourcompany.taskmanager",
+      "permissions": [
+        "android.permission.INTERNET"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -33,6 +38,13 @@
     "scheme": "task-manager",
     "sdkVersion": "52.0.0",
     "newArchEnabled": true,
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/cce85ccf-eba8-488b-b940-427b83db2ee5"
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
     "experiments": {
       "typedRoutes": true,
       "tsconfigPaths": true
@@ -42,7 +54,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "task-manager"
+        "projectId": "cce85ccf-eba8-488b-b940-427b83db2ee5"
       }
     }
   }
