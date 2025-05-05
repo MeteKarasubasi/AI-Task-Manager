@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "cce85ccf-eba8-488b-b940-427b83db2ee5"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/cce85ccf-eba8-488b-b940-427b83db2ee5"
+    },
+    "android": {},
+    "ios": {},
+    "owner": "mete1923"
+  }
+}
