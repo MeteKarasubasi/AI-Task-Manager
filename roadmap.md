@@ -1,168 +1,240 @@
-# AI Destekli Proje ve Görev Yönetim Sistemi - Roadmap
+📜 AI RULES (for Turkish explanation, English instructions)
+🌟 General Rules
+You must understand and strictly follow the roadmap steps listed below.
 
-## **🚀 Teknoloji Yığını (Tech Stack)**  
+You must complete all tasks fully, do not skip any detail.
 
-### **📌 Ön Uç (Web - Django Tabanlı)**
-- Django (Server-side rendering ve API için)
-- Django Template Engine (Dinamik HTML oluşturma)
-- Bootstrap veya Tailwind CSS (Hızlı ve modern UI için)
-- JavaScript (Interaktif özellikler için)
-- Axios (API istekleri için)
+You must explain every step clearly in Turkish.
 
-### **📌 Mobil Uygulama (React Native - Expo)**
-- React Native (Mobil uygulama geliştirme)
-- Expo (Hızlı geliştirme ve test)
-- React Navigation (Sayfalar arası geçiş)
-- Firebase Firestore (Gerçek zamanlı veri yönetimi)
-- Firebase Authentication (Kullanıcı kimlik doğrulama)
-- AsyncStorage (Mobil cihazda yerel veri saklama)
-- Axios (API istekleri için)
+Your Turkish explanations must be detailed, technical when needed, and easy to understand.
 
-### **📌 Arka Uç (Backend - Django REST Framework)**
-- Django + Django REST Framework (API oluşturma)
-- Django Channels (Gerçek zamanlı bildirimler ve WebSocket desteği)
-- Celery + Redis (Asenkron işlemler için)
-- Firebase Authentication (Kimlik doğrulama için merkezi sistem)
-- Firebase Firestore (Ana veritabanı olarak kullanılacak)
-- Firebase Cloud Functions (Özel backend işlemleri için)
-- Firebase Cloud Messaging (Push bildirimleri için)
-- Gemini API (AI destekli görev önerileri için)
-- Whisper API (Sesli komutları metne dönüştürmek için)
+Avoid summarizing unless explicitly asked. Always give full explanations.
 
-### **📌 Veritabanı**
-- **Firebase Firestore** (Ana veritabanı, gerçek zamanlı veri yönetimi için)
-- **Firebase Storage** (Dosya ve medya saklama)
+You should think step-by-step for each action and clearly explain your reasoning (in Turkish).
 
-### **📌 Ekstra Entegrasyonlar**
-- Google Calendar API (Takvim entegrasyonu için)
-- OpenAI / Gemini API (AI destekli öneriler ve analizler için)
-- Firebase Analytics (Kullanıcı etkinlikleri ve analiz)
+If a technology/tool/API is mentioned, also explain it briefly in Turkish before using it.
 
-## **📌 Adım Adım Uygulama Geliştirme Kılavuzu**
+For code snippets, you must explain the logic of the code right after giving the code (again, in Turkish).
 
-### **🔹 1. Django Backend ve Web Uygulamasını Kurma**
-- Django REST Framework ile `/api/` endpoint'leri oluşturma
-- Firebase Authentication entegrasyonu ile kullanıcı yönetimi
-- Firebase Firestore bağlantısını kurma ve Django'da veri çekme
-- Django Template Engine ile web arayüzünü oluşturma
-- Bootstrap veya Tailwind CSS ile UI geliştirme
+For errors, analyze the reason and suggest possible solutions (in Turkish).
 
-### **🔹 2. React Native (Expo) ile Mobil Uygulama Geliştirme**
-- Expo kullanarak React Native projesini başlatma
-- React Navigation ile sayfa geçişlerini ayarlama
-- Firebase Firestore'a bağlanarak görev listesini görüntüleme
-- Firebase Authentication ile giriş ve kullanıcı yönetimi
+You must act like an expert full-stack developer with knowledge of AI integrations.
 
-### **🔹 3. Görev Yönetimi ve Kanban Board Geliştirme**
-- Django Template Engine kullanarak web arayüzünde Kanban Board oluşturma
-- React Native ile mobilde görev yönetim ekranını geliştirme
-- Görevleri kategorize etme ve önceliklendirme
-- Firebase Firestore ile gerçek zamanlı veri senkronizasyonu
+🚀 Project Roadmap for "AI Task Manager" (Turkish Explanation)
+📍 1. Project Base Setup
+Create a GitHub repository named ai-task-manager.
 
-### **🔹 4. AI Destekli Görev Yönetimi ve Sesli Komutlar**
-- Whisper API ile sesli komutları metne çevirme
-- Gemini API ile AI destekli görev önerileri oluşturma
-- AI tabanlı görev planlama ve otomasyon
+Create two branches: main (for production), dev (for development).
 
-### **🔹 5. Gerçek Zamanlı Bildirim ve Veri Senkronizasyonu**
-- Firebase Cloud Messaging ile push bildirimleri gönderme
-- Django Channels ile anlık güncellemeleri sağlama
-- Firestore Trigger ile otomatik veri işlemleri oluşturma
+Define the branch rule: never merge directly to main without Pull Request (PR).
 
-### **🔹 6. Takvim ve Zaman Takibi**
-- Google Calendar API ile entegrasyon
-- Firebase üzerinden süre takibi ve raporlama
+Tech Stack: Git, GitHub.
 
-### **🔹 7. Kullanıcı Testleri ve Optimizasyon**
-- Web ve mobil uygulama için UI/UX testleri
-- Performans optimizasyonları
-- Güvenlik açıklarını giderme
-- Firebase Analytics ile kullanıcı davranışlarını analiz etme
+For Web:
 
-### **🔹 8. Yayına Alma**
-- Django web uygulamasını bir sunucuya (AWS, DigitalOcean, Firebase Hosting) dağıtma
-- Mobil uygulamayı Expo EAS Build ile Google Play ve App Store'a yayınlama
+Initialize React project using Create React App or Vite.
 
-## **📅 10 Haftalık Geliştirme Planı**
+Tech Stack: React.js, Vite.
 
-### **🗓️ Hafta 1: Proje Altyapısı ve Django Kurulumu**
-- Django projesini başlatma ve temel yapılandırma
-- Django REST Framework kurulumu ve basit API endpoint'leri oluşturma
-- Firebase projesini oluşturma ve API anahtarlarını ayarlama
-- Django-Firebase bağlantısını yapılandırma
-- Temel veritabanı modellerini tanımlama (Kullanıcı, Görev, Proje)
-- Kullanıcı kimlik doğrulama sistemini kurma (Firebase Authentication)
+For Mobile:
 
-### **🗓️ Hafta 2: Web Arayüzü Temelleri**
-- Django Template Engine ile ana sayfa tasarımı
-- Bootstrap/Tailwind CSS entegrasyonu
-- Kullanıcı kayıt ve giriş sayfalarını oluşturma
-- Temel yönlendirme sistemini kurma
-- Proje ve görev listeleme sayfaları geliştirme
-- Form validasyonları ve hata işleme mekanizmaları
+Initialize React Native project using Expo CLI (expo init).
 
-### **🗓️ Hafta 3: Django REST API Geliştirme**
-- Tüm CRUD operasyonları için API endpoint'leri oluşturma 
-- API kimlik doğrulama ve yetkilendirme
-- Görev oluşturma ve yönetme API'leri
-- Proje oluşturma ve yönetme API'leri
-- Filtreleme ve arama fonksiyonları için endpoint'ler
-- API dokümantasyonu oluşturma
+Tech Stack: React Native, Expo.
 
-### **🗓️ Hafta 4: React Native Mobil Uygulama Temelleri**
-- Expo ile React Native projesini başlatma
-- Temel uygulama navigasyonunu kurma (React Navigation)
-- Giriş ve kayıt ekranlarını geliştirme
-- Ana sayfa ve görev listeleme bileşenleri oluşturma
-- Firebase Authentication ile mobil giriş sistemini entegre etme
-- AsyncStorage ile yerel veri saklama fonksiyonları
+For Backend:
 
-### **🗓️ Hafta 5: Mobil Görev Yönetimi**
-- Görev detay sayfası geliştirme
-- Görev oluşturma ve düzenleme formları
-- Görevleri kategoriye göre filtreleme
-- Öncelik atama ve gösterme fonksiyonları
-- Tarih seçici ve bildirim ayarları bileşenleri
-- Sürükle-bırak görev önceliklendirme arayüzü
+Create a new project in Firebase Console.
 
-### **🗓️ Hafta 6: Kanban Board ve Görev Organizasyonu**
-- Web için Kanban board geliştirme
-- Mobil için liste veya basit Kanban görünümü
-- Görev durumları ve geçişler için sürükle-bırak fonksiyonları
-- Görev etiketleme ve kategorileme sistemi
-- Alt görevler ve ilerleme takip mekanizması
-- Firestore ile gerçek zamanlı güncelleme entegrasyonu
+Enable Firestore and Authentication.
 
-### **🗓️ Hafta 7: AI Desteği ve Sesli Komutlar**
-- Gemini API entegrasyonu
-- AI destekli görev önerileri için algoritma geliştirme
-- Sesli komut kaydetme ve işleme için arayüz
-- Whisper API ile ses-metin dönüşümü
-- Sesli komutlardan görev oluşturma mantığı
-- AI ile görev analizi ve planlama önerileri
+Tech Stack: Firebase Firestore, Firebase Authentication.
 
-### **🗓️ Hafta 8: Gerçek Zamanlı Bildirimler**
-- Firebase Cloud Messaging kurulumu
-- Django'dan push bildirim gönderme mekanizması
-- Mobilde bildirimleri alma ve gösterme
-- Bildirim tercihlerini yönetme
-- Görev hatırlatıcıları ve zamanlı bildirimler
-- Django Channels ile gerçek zamanlı web güncellemeleri
+📍 2. User Authentication
+Design Signup and Login forms (Web & Mobile) for email/password authentication.
 
-### **🗓️ Hafta 9: Takvim Entegrasyonu ve Raporlama**
-- Google Calendar API entegrasyonu
-- Takvim senkronizasyonu (görevleri takvime ekleme)
-- Günlük, haftalık, aylık görünümler
-- Görev tamamlama istatistikleri ve grafikler
-- İlerleme raporları ve performans analizi
-- Zaman takibi ve çalışma süresi hesaplama
+Add Password Reset flow.
 
-### **🗓️ Hafta 10: Optimizasyon ve Yayına Hazırlık**
-- Kod optimizasyonu ve temizliği
-- Performans iyileştirmeleri
-- Güvenlik denetimi ve açık giderme
-- Hata yakalama ve loglama sistemlerini geliştirme
-- Uygulamayı yayına hazırlama (build ve paketleme)
-- Son kullanıcı testleri ve geri bildirimlere göre düzeltmeler
-- Yayın için dokümantasyon hazırlama
+After login, redirect user to the homepage.
 
+Tech Stack: React.js, React Native, Firebase Auth, Expo Router / React Navigation.
+
+Integrate with Firebase Authentication API for login/signup.
+
+Properly catch and display errors (like "password too short").
+
+Tech Stack: Firebase Authentication SDK, Firebase Admin SDK (Node.js).
+
+Implement session management:
+
+Store user sessions with localStorage (Web) and AsyncStorage (Mobile).
+
+Check session at app start (Auto-login).
+
+Tech Stack: localStorage, AsyncStorage, Context API.
+
+📍 3. User Profile System
+Create a user model in Firestore:
+
+Fields: name, email, preferredTasks, workingHours, profileImage.
+
+Save user data during signup.
+
+Tech Stack: Firebase Firestore, Firebase Admin SDK.
+
+Build profile pages:
+
+Allow users to view and edit their profile.
+
+Optional: Integrate Firebase Storage for profile image upload.
+
+Tech Stack: React.js, React Native, Firebase Firestore, Firebase Storage.
+
+📍 4. Task Management Module (CRUD)
+Design a task collection in Firestore:
+
+Fields: taskTitle, description, category, priority, status, assignedTo, createdAt, dueDate.
+
+Implement CRUD operations:
+
+Create: Add new task.
+
+Read: Fetch and display task list.
+
+Update: Edit task details.
+
+Delete: Remove task.
+
+Tech Stack: Firebase Firestore, React Query or SWR.
+
+Manage task statuses:
+
+Status types: To Do, In Progress, Completed, Blocked.
+
+Enable real-time sync with Firestore.
+
+Tech Stack: Firestore Real-time Updates, onSnapshot API.
+
+📍 5. Kanban Board
+Create a Kanban board UI:
+
+Columns: To Do, In Progress, Completed.
+
+Tech Stack: react-beautiful-dnd, @shopify/draggable.
+
+Implement drag and drop feature.
+
+Update task status automatically in Firestore after moving.
+
+Tech Stack: Firestore batch updates.
+
+📍 6. Real-Time Notifications
+Set up Firebase Cloud Messaging (FCM).
+
+Request notification permission from users.
+
+Tech Stack: Firebase Cloud Messaging, Expo Push Notifications.
+
+Send notification when:
+
+A task status changes (e.g., moved to In Progress or Completed).
+
+Notification content: Task name, status, timestamp.
+
+Tech Stack: Node.js, Firebase Admin SDK.
+
+📍 7. AI-Based Task Suggestion and Prioritization
+Use Gemini API for task suggestion.
+
+Collect user's past task data and send to Gemini.
+
+AI suggests:
+
+New tasks
+
+Prioritized tasks
+
+Tech Stack: Gemini API, Node.js, React Query.
+
+Show 3 AI-generated suggestions to the user.
+
+Allow user to accept and add suggestions as tasks (with "Suggested" tag).
+
+Tech Stack: React.js, React Native.
+
+📍 8. Add Task by Voice
+Implement audio recording (start/stop) on Web and Mobile.
+
+Tech Stack: Expo Audio API, Web Speech API.
+
+Integrate with Whisper API:
+
+Send the audio file to Whisper.
+
+Convert to text.
+
+Extract task title and description from the text.
+
+Tech Stack: Whisper API, Axios, Node.js.
+
+Show the extracted text to user before saving as a task.
+
+Tech Stack: React.js, React Native, Firestore.
+
+📍 9. Calendar and Time Tracking
+Integrate with Google Calendar API:
+
+Ask user permission.
+
+Automatically sync tasks to the calendar based on due date.
+
+Tech Stack: Google Calendar API, OAuth 2.0, Node.js.
+
+Implement task-based time tracking:
+
+Add start/stop timer on task detail screen.
+
+Save total time when task is completed.
+
+Tech Stack: React Timer Hook, Firestore.
+
+📍 10. CI/CD and Deployment
+For Web App:
+
+Set up GitHub Actions:
+
+On push → Run tests → Build → Deploy to Vercel or Netlify.
+
+Tech Stack: GitHub Actions, Vercel, Netlify.
+
+For Mobile App:
+
+Use EAS Build service from Expo:
+
+Create Android (.apk) and iOS (.ipa) builds.
+
+Use EAS Update for over-the-air updates.
+
+Tech Stack: Expo EAS Build, EAS Update.
+
+Maintain separate versioning for Web and Mobile.
+
+Follow Semantic Versioning and Conventional Commits.
+
+Tech Stack: Semantic Versioning (semver), Conventional Commits.
+
+✨ Bonus: UI/UX Guidelines
+For Web:
+
+Use Material UI (MUI) or Tailwind CSS.
+
+For Mobile:
+
+Use React Native Paper or NativeWind.
+
+Always add Skeleton Loading and Empty State Screens for better user experience.
+
+🎯 Final Notes
+✅ Always follow the exact order unless stated otherwise.
+✅ Explain every step clearly in Turkish.
+✅ Never leave any point unexplained.
