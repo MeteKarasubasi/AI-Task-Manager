@@ -16,26 +16,30 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from tasks.views import TaskViewSet
+from django.conf import settings
+from django.conf.urls.static import static
 from django.http import JsonResponse
 
-def api_root(request):
+def welcome(request):
+    """
+    API ana sayfası için basit bir karşılama mesajı.
+    """
     return JsonResponse({
-        'status': 'API is running',
+        'message': 'AI Task Manager API\'sine Hoş Geldiniz!',
+        'version': '1.0.0',
         'endpoints': {
-            'tasks': '/api/tasks/',
             'admin': '/admin/',
-            'auth': '/api-auth/'
+            'api': {
+                'users': '/api/users/',
+                'profile': '/api/users/me/',
+                'email_verification': '/api/users/verify_email/',
+                'password_reset': '/api/users/reset_password/',
+            }
         }
     })
 
-router = DefaultRouter()
-router.register(r'tasks', TaskViewSet, basename='task')
-
 urlpatterns = [
-    path('', api_root, name='api-root'),  # Ana sayfa için root view
+    path('', welcome, name='welcome'),  # Ana sayfa
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls')),
-]
+    path('api/users/', include('users.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

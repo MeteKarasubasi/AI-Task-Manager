@@ -11,6 +11,18 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+# from dotenv import load_dotenv
+from .firebase_config import initialize_firebase
+
+# Load environment variables
+# load_dotenv()
+
+# Initialize Firebase Admin SDK
+try:
+    initialize_firebase()
+except Exception as e:
+    print(f"❌ Firebase Admin SDK başlatılırken hata oluştu: {str(e)}")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +32,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-n$w8+04su1(f+lda%co@)@o)yf*17^x7+4&)6!a9@p$u4w(ynp'
+SECRET_KEY = 'django-insecure-123456789abcdefg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']  # Configure appropriately in production
 
 
 # Application definition
@@ -37,13 +49,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',  # Django REST framework
-    'corsheaders',    # CORS headers
-    'tasks',          # Tasks uygulaması
+    
+    # Third party apps
+    'rest_framework',
+    'corsheaders',
+    
+    # Local apps
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # CORS middleware en üstte olmalı
+    'corsheaders.middleware.CorsMiddleware',  # CORS middleware
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -107,9 +123,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'tr-tr'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Istanbul'
 
 USE_I18N = True
 
@@ -120,23 +136,42 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CORS ayarları
-CORS_ALLOW_ALL_ORIGINS = True  # Geliştirme ortamı için. Prodüksiyonda spesifik originler belirtilmeli
+# CORS settings
+CORS_ALLOW_ALL_ORIGINS = True  # Change this in production
 CORS_ALLOW_CREDENTIALS = True
 
-# REST Framework ayarları
+# REST Framework settings
 REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'backend.firebase_auth.FirebaseAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
-    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
 }
+
+# Firebase Configuration
+FIREBASE_CONFIG = {
+    'apiKey': 'AIzaSyA1234567890abcdefghijklmnopqrstuvwxyz',  # Hata mesajında görünen API anahtarı
+    'authDomain': 'your-project-id.firebaseapp.com',
+    'projectId': 'your-project-id',
+    'storageBucket': 'your-project-id.appspot.com',
+    'messagingSenderId': 'your-messaging-sender-id',
+    'appId': 'your-app-id',
+    'measurementId': 'your-measurement-id',
+}
+
+# Custom user model
+AUTH_USER_MODEL = 'users.User'
