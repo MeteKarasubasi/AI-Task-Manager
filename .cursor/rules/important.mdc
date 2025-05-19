@@ -1,0 +1,207 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+GENERAL INSTRUCTIONS:
+You are assigned to develop the project named "AI Assisted Task and Meeting Management System".
+
+You must follow the roadmap exactly and complete every single feature described in the prompt.
+
+Every step you perform must be explained clearly in Turkish.
+
+Your Turkish explanations must be:
+
+Detailed
+
+Educational (as if teaching the topic)
+
+Step-by-step (adım adım ilerleyen)
+
+Technical but understandable (teknik ama açık anlatımlı)
+
+Each feature you complete must be followed by:
+
+A detailed Turkish explanation
+
+What you did
+
+Why you did it
+
+What would happen if you skipped it
+
+You must not skip any small detail.
+
+You must assume that the reader is learning while reading, so you must explain even simple concepts (e.g., "What is Firestore?", "What is React Navigation?").
+
+WORKFLOW REQUIREMENTS:
+Before starting a major task, give a short Turkish briefing: what will be done and why.
+
+During implementation, give live Turkish explanations after each important code block.
+
+After completing a major step, write a detailed Turkish summary of what was achieved.
+
+Example structure for every feature:
+
+makefile
+Kopyala
+Düzenle
+Ön Bilgi: (Bu adımda ne yapıyoruz, neden yapıyoruz?)
+Kodlama: (Kodun ardından kısa açıklamalar)
+Özet: (Adımı bitirince detaylı bir Türkçe açıklama)
+CODING STANDARDS:
+You must write clean, commented code.
+
+Every important function and class must have a Turkish comment explaining what it does.
+
+Use best practices: separation of concerns, modularity, clean architecture principles.
+
+If there are options, always choose the method that is:
+
+More secure
+
+More scalable
+
+More efficient
+
+TECHNOLOGIES TO USE:
+Frontend Web: React.js
+
+Frontend Mobile: React Native (Expo)
+
+Backend: Django REST Framework
+
+Authentication & Database: Firebase Authentication + Firestore
+
+AI Services: Gemini API (Text summarization, task suggestions), Whisper API (Speech-to-text)
+
+CI/CD: GitHub Actions, Expo EAS
+
+Hosting: Firebase Hosting / Vercel (Web app)
+
+DETAILED FEATURE REQUIREMENTS:
+(For each of the features below, follow the above workflow.)
+
+1. Project Setup
+Set up React.js project for web
+
+Set up Expo project for mobile
+
+Set up Django backend project
+
+Connect Firebase Authentication and Firestore
+
+Turkish explanations: Why we choose these technologies, how to initialize them, common problems.
+
+2. Authentication System
+Email/password signup and login
+
+(Optional) Google login
+
+Saving user profiles in Firestore
+
+Turkish explanations: How Firebase Authentication works, security practices, Firestore document structure.
+
+3. UI/UX Navigation
+Web: React Router setup
+
+Mobile: React Navigation setup
+
+Pages: Dashboard, Profile, Tasks, Meetings
+
+Turkish explanations: Navigation philosophy, route protection, responsive design basics.
+
+4. Firestore Database Integration
+Create users, tasks, meetings collections
+
+Real-time data updates with onSnapshot
+
+Turkish explanations: NoSQL database concepts, data modeling strategies.
+
+5. Kanban Board Implementation
+Web: react-beautiful-dnd
+
+Mobile: react-native-draggable-flatlist
+
+Task status management (To Do, In Progress, Done)
+
+Turkish explanations: Drag and drop mechanics, handling Firestore updates.
+
+6. AI-Powered Task Suggestions
+Analyze user task history
+
+Send context to Gemini API
+
+Show AI-generated task suggestions
+
+Turkish explanations: Prompt engineering basics, interpreting Gemini API outputs.
+
+7. Voice Commands for Tasks
+Record audio (Expo Audio/Web Audio API)
+
+Convert speech to text using Whisper API
+
+Add as task after confirmation
+
+Turkish explanations: How speech-to-text works, API integration tips.
+
+8. Meeting Notes Summarization
+Input long meeting notes
+
+Use Gemini API to summarize into 5 sentences and 5 action items
+
+Add action items as tasks
+
+Turkish explanations: Summarization techniques, parsing JSON outputs.
+
+9. Notifications and Calendar Sync
+Push notifications (FCM)
+
+Google Calendar API integration
+
+Turkish explanations: OAuth2 authorization, event creation flow.
+
+10. CI/CD Pipeline Setup
+Web auto-deployment with GitHub Actions
+
+Mobile auto-build with Expo EAS
+
+Turkish explanations: Why CI/CD matters, how to troubleshoot common errors.
+
+WRITING STYLE:
+Explanations must be formal but friendly.
+
+Avoid jargon unless it is explained.
+
+Every paragraph must aim to teach something new.
+
+At the end of the project, write a full Turkish project overview:
+
+What was built
+
+What technologies were used
+
+Main challenges and how they were solved
+
+Future improvement ideas
+
+ADDITIONAL RULES:
+If you encounter an error, explain it in Turkish, show the error message, and guide how to fix it.
+
+If there are multiple solution paths, briefly compare them in Turkish and choose the best.
+
+Always use latest stable versions of libraries unless stated otherwise.
+
+Keep the project lightweight, scalable, and maintainable.
+
+🏁 FINAL DELIVERY
+The project must be 100% functional.
+
+All features must be fully implemented.
+
+All Turkish explanations must be completed.
+
+All code must be clean, commented, and structured properly.
+
+
+There must be no missing parts, no skipped explanations.
