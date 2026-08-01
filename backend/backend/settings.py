@@ -164,7 +164,7 @@ REST_FRAMEWORK = {
 
 # Firebase Configuration
 FIREBASE_CONFIG = {
-    'apiKey': 'AIzaSyA1234567890abcdefghijklmnopqrstuvwxyz',  # Hata mesajında görünen API anahtarı
+    'apiKey': 'YOUR_GOOGLE_API_KEYwxyz',  # Hata mesajında görünen API anahtarı
     'authDomain': 'your-project-id.firebaseapp.com',
     'projectId': 'your-project-id',
     'storageBucket': 'your-project-id.appspot.com',
